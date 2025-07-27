@@ -1,42 +1,53 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2ch;
-  text-align: center;
+/* Reusable UI tweaks */
+
+nav {
+  @apply bg-black text-white shadow-lg h-20 flex items-center px-6 sticky top-0 z-50;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+nav a {
+  @apply text-xl font-bold hover:text-pink-400 transition;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  @apply bg-pink-600 hover:bg-pink-700 text-white font-semibold px-4 py-2 rounded-lg shadow-md transition duration-200;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+img {
+  @apply object-cover rounded-xl shadow;
 }
 
-.card {
-  padding: 2em;
+/* Card styles for product display */
+.product-card {
+  @apply p-4 border border-gray-200 rounded-xl hover:shadow-lg transition;
 }
 
-.read-the-docs {
-  color: #888;
+/* Cart styling */
+.cart-item {
+  @apply flex items-center justify-between py-4 border-b;
 }
+
+.cart-total {
+  @apply text-xl font-bold text-right mt-4;
+}
+
+.cta-button {
+  @apply bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:scale-105 transition;
+}
+
+/* Responsive layout helpers */
+.container {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Hero section or landing banners */
+.hero {
+  @apply h-[70vh] bg-cover bg-center flex items-center justify-center text-white text-4xl font-bold;
+}
+.hero-heading {
+  @apply text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-8;
+}
+
+.collection-box {
+  @apply w-[300px] h-[200px] bg-cover bg-center rounded-xl shadow-lg flex items-center justify-center text-2xl font-bold text-white hover:scale-105 transition-transform;
+}
+

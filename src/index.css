@@ -2,64 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global styles */
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color-scheme: light dark;
-  background-color: #f5f5f5;
-  color: #1a202c;
+body {
+  @apply m-0 p-0 box-border min-h-screen bg-white text-gray-800 font-sans;
+}
+
+/* Font smoothing and box-sizing reset */
+html {
+  @apply scroll-smooth;
+  font-family: 'Inter', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 body {
+  @apply bg-white text-gray-800 leading-relaxed antialiased;
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #f5f5f5;
-  color: #1a202c;
-}
-
-a {
-  @apply font-medium text-indigo-600 no-underline;
-}
-a:hover {
-  @apply text-indigo-400;
-}
-
-h1, h2, h3, h4 {
-  font-weight: 600;
-  color: #1a202c;
-}
-
-button {
-  @apply rounded-lg border border-transparent px-4 py-2 text-base font-medium bg-gray-800 text-white cursor-pointer transition-colors duration-300;
-}
-button:hover {
-  @apply bg-gray-700;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-/* Light mode */
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #1a202c;
-    background-color: #f5f5f5;
-  }
-
-  body {
-    color: #1a202c;
-    background-color: #f5f5f5;
-  }
-
-  a:hover {
-    color: #4f46e5;
-  }
-
-  button {
-    background-color: #1f2937;
-  }
+  min-height: 100vh;
 }
